@@ -12,7 +12,7 @@ export default function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=9eba4d1145f22a853a792b306bbeed3f`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={API_KEY}`);
     try {
       const data = await response.json();
       if (response.ok) {
